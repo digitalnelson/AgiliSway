@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgiliSway.vNext.Pro.WPF", "AgiliSway.vNext\AgiliSway.vNext.Pro.WPF.csproj", "{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DDF2FEBB-E1DA-4E88-B88C-36BF775FBF28}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "AgiliSway.vNext.Pro.WPF.Setup", "AgiliSway.vNext.Pro.WPF.Setup\AgiliSway.vNext.Pro.WPF.Setup.isproj", "{C10F87F4-6F12-40F5-B428-04491D546673}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgiliSway.vNext.Pro.WPF.Tests", "AgiliSway.vNext.Pro.WPF.Tests\AgiliSway.vNext.Pro.WPF.Tests.csproj", "{214E83B5-86F4-460C-B741-053C2C0113BE}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://digitalnelson.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AgiliSway.vNext\\AgiliSway.vNext.Pro.WPF.csproj
+		SccProjectName1 = AgiliSway.vNext
+		SccLocalPath1 = AgiliSway.vNext
+		SccProjectUniqueName2 = AgiliSway.vNext.Pro.WPF.Setup\\AgiliSway.vNext.Pro.WPF.Setup.isproj
+		SccProjectName2 = AgiliSway.vNext.Pro.WPF.Setup
+		SccLocalPath2 = AgiliSway.vNext.Pro.WPF.Setup
+		SccProjectUniqueName3 = AgiliSway.vNext.Pro.WPF.Tests\\AgiliSway.vNext.Pro.WPF.Tests.csproj
+		SccProjectName3 = AgiliSway.vNext.Pro.WPF.Tests
+		SccLocalPath3 = AgiliSway.vNext.Pro.WPF.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{C10F87F4-6F12-40F5-B428-04491D546673}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{C10F87F4-6F12-40F5-B428-04491D546673}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{C10F87F4-6F12-40F5-B428-04491D546673}.Debug|Any CPU.ActiveCfg = DVD-5
+		{C10F87F4-6F12-40F5-B428-04491D546673}.Debug|Any CPU.Build.0 = DVD-5
+		{C10F87F4-6F12-40F5-B428-04491D546673}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{C10F87F4-6F12-40F5-B428-04491D546673}.DVD-5|Any CPU.Build.0 = DVD-5
+		{C10F87F4-6F12-40F5-B428-04491D546673}.Release|Any CPU.ActiveCfg = SingleImage
+		{C10F87F4-6F12-40F5-B428-04491D546673}.Release|Any CPU.Build.0 = SingleImage
+		{C10F87F4-6F12-40F5-B428-04491D546673}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{C10F87F4-6F12-40F5-B428-04491D546673}.SingleImage|Any CPU.Build.0 = SingleImage
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

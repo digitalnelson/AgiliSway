@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="AgiliSway.vNext.Dialogs.ShouldSaveView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <DockPanel Margin="4">		
+		<Grid DockPanel.Dock="Bottom">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			
+			<Button Content="Save" Name="Save" Margin="4" />
+			<Button Content="Discard" Name="Cancel" Margin="4" Grid.Column="1" />
+		</Grid>
+		<TextBlock Margin="4" HorizontalAlignment="Center" VerticalAlignment="Center" DockPanel.Dock="Top">You have pending changes.  Would you like to save?</TextBlock>
+	</DockPanel>
+</UserControl>
