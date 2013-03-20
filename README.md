@@ -1,8 +1,10 @@
 AgiliSway
 =========
 
-.Net WPF application written in c#.  It is a thin wrapper around the WiiMote Lib written by Brian Peek intended to aquire postural sway data from the Wii Fit for the purposes of study of postural sway across both physiology and pathophysiology.  It is released under the MIT license.
+A thin WPF wrapper around the WiiMote Lib (written by Brian Peek) intended to allow researchers to acquire data from the Wii Fit.  It collects raw data from the board and saves center of gravity coordinates to disk in an XML format.  It is also capable of exporting raw sensor values for those interested in generating custom analytics.
 
-The wiimotelib code can be found here:
+This software is released under the MIT license.
+
+The wiimotelib code (MS-PL) can be found here:
 http://wiimotelib.codeplex.com/
 http://www.brianpeek.com/page/net-based-wiimote-applications
