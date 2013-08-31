@@ -5,11 +5,12 @@ A thin WPF wrapper around the [WiiMote Lib][wiimotelib] (written by Brian Peek) 
 ## Installation
 
 1. Install [.net 4.5][net45]
-2. Install [Visual C++ 11 redist][vc11]
-3. Download [AgiliSway] from GitHub
+1. Install [Visual C++ 11 redist][vc11]
+1. Install [SqlCE redist][sqlce]
+1. Download [AgiliSway] from GitHub
   * Extract AgiliSway-master.zip
   * Navigate to AgiliSway-master/inst and extract AgiliSway.zip
-4. Go to extracted folder and run AgiliSway.vNext.exe
+1. Go to extracted folder and run AgiliSway.vNext.exe
 
 ## Running
 
@@ -22,5 +23,6 @@ This software is released under the MIT license.
 
 [net45]: http://www.microsoft.com/en-us/download/details.aspx?id=30653
 [vc11]: http://www.microsoft.com/en-us/download/details.aspx?id=30679
+[sqlce]: http://www.microsoft.com/en-us/download/details.aspx?id=17876
 [agilisway]: https://github.com/digitalnelson/AgiliSway/archive/master.zip
 [wiimotelib]: http://wiimotelib.codeplex.com/
