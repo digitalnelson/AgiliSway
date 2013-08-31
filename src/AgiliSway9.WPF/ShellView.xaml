@@ -6,7 +6,7 @@
 		Title="Shell" Height="600" Width="800">
 	<Controls:MetroWindow.WindowCommands>
 		<Controls:WindowCommands>
-			<Button Content="FLYOUT" cal:Message.Attach="ShowSaveChanges"/>
+			<!--<Button Content="FLYOUT" cal:Message.Attach="ShowSaveChanges"/>-->
 			<Button Content="SAVE" cal:Message.Attach="Save"/>
 			<Button Content="PREFS" cal:Message.Attach="Prefs" />
 			<Button Content="HELP" cal:Message.Attach="Help" />

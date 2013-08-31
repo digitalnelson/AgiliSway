@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using AgiliSway9.WPF.Common;
-using AgiliSway9.WPF.Event;
+﻿using AgiliSway9.WPF.Common;
+using AgiliSway9.WPF.Events;
+using AgiliSway9.WPF.ModelCalculations;
 using AgiliSway9.WPF.Models;
 using AgiliSway9.WPF.Models.Legacy;
+using AgiliSway9.WPF.Services;
 using Caliburn.Micro;
 using OxyPlot;
-using AgiliSway9.WPF.ModelCalculations;
-using AgiliSway9.WPF.Services;
-using AgiliSway9.WPF.Events;
 using OxyPlot.Series;
+using System;
+using System.Collections.Generic;
 
 namespace AgiliSway9.WPF.Collections
 {

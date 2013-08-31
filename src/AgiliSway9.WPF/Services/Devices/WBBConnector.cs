@@ -1,4 +1,5 @@
-﻿using Caliburn.Micro;
+﻿using AgiliSway9.WPF.Events;
+using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,61 +11,120 @@ namespace AgiliSway9.WPF.Services.Devices
 {
 	public class WBBConnector : Screen, IDeviceConnector
 	{
-        private bool _searchForDevices = false;
+		private bool _searchForDevices = false;
+		private IEventAggregator _eventAggregator;
 
-        public string DeviceStatus { get { return _inlDeviceStatus; } set { _inlDeviceStatus = value; NotifyOfPropertyChange(() => DeviceStatus); } } private string _inlDeviceStatus;
+		public string DeviceStatus { get { return _inlDeviceStatus; } set { _inlDeviceStatus = value; NotifyOfPropertyChange(() => DeviceStatus); } } private string _inlDeviceStatus;
 		public IDevice CurrentDevice { get { return _inlCurrentDevice; } set { _inlCurrentDevice = value; } } private IDevice _inlCurrentDevice;
 
-        public WBBConnector()
-        {
-            // TODO: May need a cancellation token so the process can die
-            // TODO: Will need to figure out what happens if the board disconnects (i.e. runs out of batteries)
-            Task.Run(async () =>
-            {
-                _searchForDevices = true;
-                while (_searchForDevices)
-                {
-                    if (CurrentDevice == null)
-                    {
-                        try
-                        {
-                            var dev = GetFirstOrNull();
-                            if (dev != null)
-                                CurrentDevice = dev;
-                        }
-                        catch (Exception ex)
-                        {
-                            DeviceStatus = "Device Not Found.\n\nError: " + ex.Message;  // TODO: Add this message to some bindable property so we can put it in the UI somewhere
-                        }
-                    }
+		public WBBConnector()
+		{
+			this._eventAggregator = IoC.Get<IEventAggregator>();
 
-                    await Task.Delay(1000);
-                }
-            });
-        }
+			// TODO: May need a cancellation token so the process can die
+			// TODO: Will need to figure out what happens if the board disconnects (i.e. runs out of batteries)
+			Task.Run(async () =>
+			{
+				_searchForDevices = true;
+				while (_searchForDevices)
+				{
+					if (CurrentDevice == null)
+					{
+						try
+						{
+							this._eventAggregator.Publish(new WiiBBSearchEvent()
+							{
+								SearchState = WiiBBSearchState.Searching,
+								Message = "Starting search for available devices."
+							});
 
-        public IDevice GetFirstOrNull()
-        {
-            var motes = new WiimoteCollection();
-            motes.FindAllWiimotes();
+							var motes = new WiimoteCollection();
+							motes.FindAllWiimotes();
 
-            foreach (var mote in motes)
-            {
-                try
-                {
-                    var dev = IoC.Get<WBBDevice>();
-                    dev.Device = mote;
+							WBBDevice device = (WBBDevice)null;
+							foreach (var mote in motes)
+							{
+								try
+								{
+									this._eventAggregator.Publish(new WiiBBSearchEvent()
+									{
+										SearchState = WiiBBSearchState.Found,
+										Message = "Found device."
+									});
 
-                    dev.Connect();
+									device = IoC.Get<WBBDevice>();
+									device.Device = mote;
+									this._eventAggregator.Publish(new WiiBBSearchEvent()
+									{
+										SearchState = WiiBBSearchState.Connecting,
+										Message = "Connecting to device."
+									});
 
-                    if (dev.DeviceState == DeviceState.Connected)
-                        return dev;
-                }
-                catch (Exception) { }
-            }
+									device.Connect();
+									if (device.DeviceState == DeviceState.Connected)
+									{
+										this._eventAggregator.Publish(new WiiBBSearchEvent()
+										{
+											SearchState = WiiBBSearchState.Connected,
+											Message = "Connected to device."
+										});
+										break;
+									}
+									else
+										device = (WBBDevice)null;
+								}
+								catch (Exception ex)
+								{
+									this._eventAggregator.Publish(new WiiBBSearchEvent()
+									{
+										SearchState = WiiBBSearchState.Error,
+										Message = ("Error with device: " + ex.Message)
+									});
+								}
+							}
 
-            return null;
-        }
+							if (device != null)
+								this.CurrentDevice = (IDevice)device;
+						}
+						catch (Exception exception_2)
+						{
+							this.DeviceStatus = "Device Not Found.\n\nError: " + exception_2.Message;
+							this.CurrentDevice = (IDevice)null;
+							this._eventAggregator.Publish(new WiiBBSearchEvent()
+							{
+								SearchState = WiiBBSearchState.Error,
+								Message = this.DeviceStatus
+							});
+						}
+					}
+
+					await Task.Delay(1000);
+				}
+			});
+		}
+
+		public IDevice GetFirstOrNull()
+		{
+			var motes = new WiimoteCollection();
+			motes.FindAllWiimotes();
+
+			foreach (var mote in motes)
+			{
+				try
+				{
+					var dev = IoC.Get<WBBDevice>();
+					dev.Device = mote;
+
+					dev.Connect();
+
+					if (dev.DeviceState == DeviceState.Connected)
+						return dev;
+				}
+				catch (Exception) { }
+			}
+
+			return null;
+		}
 
 		public List<IDevice> All()
 		{

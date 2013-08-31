@@ -5,13 +5,13 @@ using System.Text;
 
 namespace AgiliSway9.WPF.Models
 {
-    public class Task
-    {
-        public int TaskId { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public int Duration { get; set; }
+	public class Task
+	{
+		public int TaskId { get; set; }
+		public string Title { get; set; }
+		public string Description { get; set; }
+		public int Duration { get; set; }
 
 		public Study Study { get; set; }
-    }
+	}
 }

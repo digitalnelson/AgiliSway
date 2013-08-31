@@ -7,7 +7,7 @@ using AgiliSway9.WPF.Subjects;
 using AgiliSway9.WPF.Collections;
 using AgiliSway9.WPF.Studies;
 using Ninject;
-using AgiliSway9.WPF.Event;
+using AgiliSway9.WPF.Events;
 using AgiliSway9.WPF.Dialogs;
 using AgiliSway9.WPF.Services;
 using AgiliSway9.WPF.Flyouts;
@@ -99,7 +99,7 @@ namespace AgiliSway9.WPF
 		{
 			if (CanSave)
 			{
-                // TODO: Figure out why this does not show sometimes on exception shutdown
+				// TODO: Figure out why this does not show sometimes on exception shutdown
 
 				bool? toSave = _windowManager.ShowDialog(new ShouldSaveViewModel());
 

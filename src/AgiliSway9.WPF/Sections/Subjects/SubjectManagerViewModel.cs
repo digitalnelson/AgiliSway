@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AgiliSway9.WPF.Event;
+using AgiliSway9.WPF.Events;
 using AgiliSway9.WPF.Models;
 using Caliburn.Micro;
 using Ninject;

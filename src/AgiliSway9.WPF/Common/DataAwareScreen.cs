@@ -1,5 +1,5 @@
 ﻿using System;
-using AgiliSway9.WPF.Event;
+using AgiliSway9.WPF.Events;
 using Caliburn.Micro;
 
 namespace AgiliSway9.WPF.Common

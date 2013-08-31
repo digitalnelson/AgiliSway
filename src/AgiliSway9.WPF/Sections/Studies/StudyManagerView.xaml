@@ -1,31 +1,31 @@
 ﻿<UserControl x:Class="AgiliSway9.WPF.Studies.StudyManagerView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-             xmlns:cal="http://www.caliburnproject.org"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="599">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition MaxWidth="300px" Width="0.5*"/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+			 xmlns:cal="http://www.caliburnproject.org"
+			 mc:Ignorable="d" 
+			 d:DesignHeight="450" d:DesignWidth="599">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition MaxWidth="300px" Width="0.5*"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
 
-        <ListBox x:Name="Studies" Margin="4,4,0,0" Padding="0,0,0,4" HorizontalContentAlignment="Stretch" BorderThickness="0" Background="#11000000"/>
-        
-        <DockPanel Grid.Row="1" Margin="4,0,0,4" LastChildFill="False" Background="#11000000">
+		<ListBox x:Name="Studies" Margin="4,4,0,0" Padding="0,0,0,4" HorizontalContentAlignment="Stretch" BorderThickness="0" Background="#11000000"/>
+		
+		<DockPanel Grid.Row="1" Margin="4,0,0,4" LastChildFill="False" Background="#11000000">
 			<Button Name="Import" Content="Import" DockPanel.Dock="Left" Width="60" Margin="4,0,0,4" />
-            <Button Name="NewStudy" Content="New" DockPanel.Dock="Left" Width="60" Margin="4,0,0,4" />
-            <Button Name="DeleteStudy" Content="Delete" DockPanel.Dock="Left" Width="60" Margin="4,0,0,4" />
-        </DockPanel>
-        
-        <Grid Grid.Column="1" Grid.RowSpan="2" Margin="4,4,4,4">
+			<Button Name="NewStudy" Content="New" DockPanel.Dock="Left" Width="60" Margin="4,0,0,4" />
+			<Button Name="DeleteStudy" Content="Delete" DockPanel.Dock="Left" Width="60" Margin="4,0,0,4" />
+		</DockPanel>
+		
+		<Grid Grid.Column="1" Grid.RowSpan="2" Margin="4,4,4,4">
 
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto"/>
@@ -35,77 +35,77 @@
 				<RowDefinition Height=".2*"/>
 			</Grid.RowDefinitions>
 			
-            <Grid Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                
-                <Label Content="Title" Grid.Row="0" Grid.Column="0" Padding="5,5,5,1"/>
-                <TextBox Name="SelectedStudy_Title"  Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" />
-                <Label Content="Description"  Grid.Row="0" Grid.Column="1" Margin="4,0,0,0" Padding="5,5,5,1"/>
-                <TextBox x:Name="SelectedStudy_Description"  Grid.Row="1" Margin="4,0,0,0" Grid.Column="1" />
-            </Grid>
-                       
+			<Grid Grid.Row="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition />
+					<RowDefinition />
+				</Grid.RowDefinitions>
+				
+				<Label Content="Title" Grid.Row="0" Grid.Column="0" Padding="5,5,5,1"/>
+				<TextBox Name="SelectedStudy_Title"  Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch" />
+				<Label Content="Description"  Grid.Row="0" Grid.Column="1" Margin="4,0,0,0" Padding="5,5,5,1"/>
+				<TextBox x:Name="SelectedStudy_Description"  Grid.Row="1" Margin="4,0,0,0" Grid.Column="1" />
+			</Grid>
+					   
 			<Grid Grid.Row="1" Margin="0,4,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
 
-                <DockPanel Background="#11777777">
+				<DockPanel Background="#11777777">
 <Label Content="Groups" DockPanel.Dock="Top"  Padding="5,1"/>
-                    <DockPanel Margin="4,4,0,4" LastChildFill="False" DockPanel.Dock="Bottom">
-                        <Button Content="New" IsEnabled="False"  cal:Action.TargetWithoutContext="{Binding SelectedStudy}" cal:Message.Attach="NewGroup" DockPanel.Dock="Left" Width="60" />
-                        <Button Content="Delete" IsEnabled="False" cal:Action.TargetWithoutContext="{Binding SelectedStudy}" cal:Message.Attach="DeleteGroup" DockPanel.Dock="Left" Width="60" Margin="4,0,0,0" />
-                    </DockPanel>
-                    <ListBox Name="SelectedStudy_Groups" DockPanel.Dock="Top" BorderThickness="0" Background="#00000000" ScrollViewer.VerticalScrollBarVisibility="Visible" />
-                </DockPanel>
+					<DockPanel Margin="4,4,0,4" LastChildFill="False" DockPanel.Dock="Bottom">
+						<Button Content="New" IsEnabled="False"  cal:Action.TargetWithoutContext="{Binding SelectedStudy}" cal:Message.Attach="NewGroup" DockPanel.Dock="Left" Width="60" />
+						<Button Content="Delete" IsEnabled="False" cal:Action.TargetWithoutContext="{Binding SelectedStudy}" cal:Message.Attach="DeleteGroup" DockPanel.Dock="Left" Width="60" Margin="4,0,0,0" />
+					</DockPanel>
+					<ListBox Name="SelectedStudy_Groups" DockPanel.Dock="Top" BorderThickness="0" Background="#00000000" ScrollViewer.VerticalScrollBarVisibility="Visible" />
+				</DockPanel>
 
-                <Border Grid.Column="1" Margin="0,0,0,0" Padding="4,4,4,4" BorderThickness="3" BorderBrush="#11777777">
-                    <DockPanel LastChildFill="True" >
+				<Border Grid.Column="1" Margin="0,0,0,0" Padding="4,4,4,4" BorderThickness="3" BorderBrush="#11777777">
+					<DockPanel LastChildFill="True" >
 						<Label Content="Name" DockPanel.Dock="Top"  Padding="5,1" />
-                        <TextBox Name="SelectedStudy_SelectedGroup_Title" DockPanel.Dock="Top"/>
+						<TextBox Name="SelectedStudy_SelectedGroup_Title" DockPanel.Dock="Top"/>
 						<Label Content="Description" DockPanel.Dock="Top" Padding="5,1" />
-                        <TextBox Name="SelectedStudy_SelectedGroup_Description" DockPanel.Dock="Top"/>
-                    </DockPanel>
-                </Border>
-            </Grid>
-            
+						<TextBox Name="SelectedStudy_SelectedGroup_Description" DockPanel.Dock="Top"/>
+					</DockPanel>
+				</Border>
+			</Grid>
+			
 			<Grid Grid.Row="2"  Margin="0,4,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
 
-                <DockPanel Background="#11777777">
+				<DockPanel Background="#11777777">
 					<Label Content="Tasks" DockPanel.Dock="Top" Padding="5,1"/>
-                    <DockPanel Margin="4,4,0,4" LastChildFill="False" DockPanel.Dock="Bottom">
-                        <Button Content="New" IsEnabled="False"  cal:Action.TargetWithoutContext="{Binding SelectedStudy}" cal:Message.Attach="NewTask" DockPanel.Dock="Left" Width="60" />
-                        <Button Content="Delete" IsEnabled="False"  cal:Action.TargetWithoutContext="{Binding SelectedStudy}" cal:Message.Attach="DeleteTask" DockPanel.Dock="Left" Width="60" Margin="4,0,0,0" />
-                    </DockPanel>
-                    <ListBox Name="SelectedStudy_Tasks" DockPanel.Dock="Top" BorderThickness="0" Background="#00000000" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
-                </DockPanel>
+					<DockPanel Margin="4,4,0,4" LastChildFill="False" DockPanel.Dock="Bottom">
+						<Button Content="New" IsEnabled="False"  cal:Action.TargetWithoutContext="{Binding SelectedStudy}" cal:Message.Attach="NewTask" DockPanel.Dock="Left" Width="60" />
+						<Button Content="Delete" IsEnabled="False"  cal:Action.TargetWithoutContext="{Binding SelectedStudy}" cal:Message.Attach="DeleteTask" DockPanel.Dock="Left" Width="60" Margin="4,0,0,0" />
+					</DockPanel>
+					<ListBox Name="SelectedStudy_Tasks" DockPanel.Dock="Top" BorderThickness="0" Background="#00000000" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+				</DockPanel>
 
-                <Border Grid.Column="1" Margin="0,0,0,0" Padding="4,4,4,4" BorderThickness="3" BorderBrush="#11777777">
-                    <DockPanel LastChildFill="True" >
-                        <Label Content="Name" DockPanel.Dock="Top" Padding="5,1" />
-                        <TextBox Name="SelectedStudy_SelectedTask_Title" DockPanel.Dock="Top"/>
+				<Border Grid.Column="1" Margin="0,0,0,0" Padding="4,4,4,4" BorderThickness="3" BorderBrush="#11777777">
+					<DockPanel LastChildFill="True" >
+						<Label Content="Name" DockPanel.Dock="Top" Padding="5,1" />
+						<TextBox Name="SelectedStudy_SelectedTask_Title" DockPanel.Dock="Top"/>
 						<Label Content="Duration (sec)" DockPanel.Dock="Top" Padding="5,1" />
-                        <TextBox Name="SelectedStudy_SelectedTask_Duration"  DockPanel.Dock="Top"/>
+						<TextBox Name="SelectedStudy_SelectedTask_Duration"  DockPanel.Dock="Top"/>
 						<Label Content="Description" VerticalAlignment="Top" DockPanel.Dock="Top"  Padding="5,1"/>
-                        <TextBox Name="SelectedStudy_SelectedTask_Description" DockPanel.Dock="Top" />
-                    </DockPanel>
-                </Border>
-            </Grid>
-            
-            <Label Content="Notes" Grid.Row="3" Padding="5,5,5,1"/>
-            <TextBox Name="SelectedStudy_Notes" Grid.Row="4"/>
-            
-        </Grid>
-    </Grid>
+						<TextBox Name="SelectedStudy_SelectedTask_Description" DockPanel.Dock="Top" />
+					</DockPanel>
+				</Border>
+			</Grid>
+			
+			<Label Content="Notes" Grid.Row="3" Padding="5,5,5,1"/>
+			<TextBox Name="SelectedStudy_Notes" Grid.Row="4"/>
+			
+		</Grid>
+	</Grid>
 </UserControl>

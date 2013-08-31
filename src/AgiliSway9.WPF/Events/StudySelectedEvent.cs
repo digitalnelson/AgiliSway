@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using AgiliSway9.WPF.Models;
 
-namespace AgiliSway9.WPF.Event
+namespace AgiliSway9.WPF.Events
 {
 	public class StudySelectedEvent
 	{
-        public Study Study { get; set; }
+		public Study Study { get; set; }
 	}
 }

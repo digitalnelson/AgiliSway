@@ -124,6 +124,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Events\DeviceSelected.cs" />
+    <Compile Include="Events\SearchingForWiiBB.cs" />
+    <Compile Include="Events\SearchingWiiBBNotFound.cs" />
+    <Compile Include="Events\WiiBBSearchEvent.cs" />
+    <Compile Include="Events\WiiBBSearchState.cs" />
     <Compile Include="Flyouts\SaveChangesViewModel.cs" />
     <Compile Include="Models\CollectProgress.cs" />
     <Compile Include="Models\Point.cs" />
