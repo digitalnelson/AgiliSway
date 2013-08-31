@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgiliSway9.WPF", "AgiliSway9.WPF\AgiliSway9.WPF.csproj", "{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DDF2FEBB-E1DA-4E88-B88C-36BF775FBF28}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgiliSway9.WPF.Tests", "AgiliSway9.WPF.Tests\AgiliSway9.WPF.Tests.csproj", "{214E83B5-86F4-460C-B741-053C2C0113BE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AgiliSway9.BluetoothHelper", "AgiliSway9.BluetoothHelper\AgiliSway9.BluetoothHelper.vcxproj", "{FBC68974-77A1-4131-8640-1CB6C971CA5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgiliSway9.DeviceManager", "AgiliSway9.DeviceManager\AgiliSway9.DeviceManager.csproj", "{BBE5F407-D975-4C98-A6BF-C410BB3DD01C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x86 = Debug|x86
+		Release|Win32 = Release|Win32
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Debug|Win32.ActiveCfg = Debug|x86
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Debug|Win32.Build.0 = Debug|x86
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Debug|x86.ActiveCfg = Debug|x86
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Debug|x86.Build.0 = Debug|x86
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Release|Win32.ActiveCfg = Release|x86
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Release|Win32.Build.0 = Release|x86
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Release|x86.ActiveCfg = Release|x86
+		{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}.Release|x86.Build.0 = Release|x86
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Debug|Win32.ActiveCfg = Debug|x86
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Debug|Win32.Build.0 = Debug|x86
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Debug|x86.ActiveCfg = Debug|x86
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Debug|x86.Build.0 = Debug|x86
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Release|Win32.ActiveCfg = Release|x86
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Release|Win32.Build.0 = Release|x86
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Release|x86.ActiveCfg = Release|x86
+		{214E83B5-86F4-460C-B741-053C2C0113BE}.Release|x86.Build.0 = Release|x86
+		{FBC68974-77A1-4131-8640-1CB6C971CA5C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FBC68974-77A1-4131-8640-1CB6C971CA5C}.Debug|Win32.Build.0 = Debug|Win32
+		{FBC68974-77A1-4131-8640-1CB6C971CA5C}.Debug|x86.ActiveCfg = Debug|Win32
+		{FBC68974-77A1-4131-8640-1CB6C971CA5C}.Debug|x86.Build.0 = Debug|Win32
+		{FBC68974-77A1-4131-8640-1CB6C971CA5C}.Release|Win32.ActiveCfg = Release|Win32
+		{FBC68974-77A1-4131-8640-1CB6C971CA5C}.Release|Win32.Build.0 = Release|Win32
+		{FBC68974-77A1-4131-8640-1CB6C971CA5C}.Release|x86.ActiveCfg = Release|Win32
+		{FBC68974-77A1-4131-8640-1CB6C971CA5C}.Release|x86.Build.0 = Release|Win32
+		{BBE5F407-D975-4C98-A6BF-C410BB3DD01C}.Debug|Win32.ActiveCfg = Debug|x86
+		{BBE5F407-D975-4C98-A6BF-C410BB3DD01C}.Debug|Win32.Build.0 = Debug|x86
+		{BBE5F407-D975-4C98-A6BF-C410BB3DD01C}.Debug|x86.ActiveCfg = Debug|x86
+		{BBE5F407-D975-4C98-A6BF-C410BB3DD01C}.Debug|x86.Build.0 = Debug|x86
+		{BBE5F407-D975-4C98-A6BF-C410BB3DD01C}.Release|Win32.ActiveCfg = Release|x86
+		{BBE5F407-D975-4C98-A6BF-C410BB3DD01C}.Release|Win32.Build.0 = Release|x86
+		{BBE5F407-D975-4C98-A6BF-C410BB3DD01C}.Release|x86.ActiveCfg = Release|x86
+		{BBE5F407-D975-4C98-A6BF-C410BB3DD01C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

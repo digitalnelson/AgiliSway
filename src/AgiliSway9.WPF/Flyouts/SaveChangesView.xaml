@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="AgiliSway9.WPF.Flyouts.SaveChangesView"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 mc:Ignorable="d" 
+			 d:DesignHeight="300" d:DesignWidth="243">
+	<Grid Margin="6">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Label Content="Save Changes" Grid.Row="0" Grid.ColumnSpan="2" Margin="0" Padding="0"  Foreground="White" FontSize="30" />
+		<TextBlock Margin="0,4,0,14" Foreground="White" Grid.Row="1" Grid.ColumnSpan="2" TextWrapping="Wrap">You have changes pending.  Would you like to save them before exiting?</TextBlock>
+		<Button Grid.Row="2" Content="Yes" Name="Save" Margin="0,0,0,0" Width="75"  HorizontalAlignment="Center" />
+		<Button Grid.Row="2" Grid.Column="1" Content="No" Name="DontSave" Width="75"  HorizontalAlignment="Center" Margin="4,0,0,0" />
+	</Grid>
+</UserControl>

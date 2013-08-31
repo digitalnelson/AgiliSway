@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFF06BC4-9385-40D4-B0B7-AE0B6BA84BC7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AgiliSway9.WPF</RootNamespace>
+    <AssemblyName>AgiliSway9</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AgiliSway9.WPF.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=1.5.1.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Caliburn.Micro.1.5.1\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=0.10.0.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MahApps.Metro.0.10.1.1\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net40\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>..\packages\OxyPlot.Core.2013.1.74.1\lib\portable-net4+sl4+wp71+win8\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf">
+      <HintPath>..\packages\OxyPlot.Wpf.2013.1.74.1\lib\NET45\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Xps">
+      <HintPath>..\packages\OxyPlot.Wpf.2013.1.74.1\lib\NET45\OxyPlot.Xps.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.4.3.6\lib\net40\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Caliburn.Micro.1.5.1\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WiimoteLib">
+      <HintPath>..\packages\WiimoteLib.1.7\lib\WiimoteLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.0.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.0.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.0.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.0.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.0.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.2.0.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Events\DeviceSelected.cs" />
+    <Compile Include="Flyouts\SaveChangesViewModel.cs" />
+    <Compile Include="Models\CollectProgress.cs" />
+    <Compile Include="Models\Point.cs" />
+    <Compile Include="Sections\Device\DeviceConfigScreen.cs" />
+    <Compile Include="Sections\Device\NULLViewModel.cs" />
+    <Compile Include="Sections\Device\SIMViewModel.cs" />
+    <Compile Include="Sections\Device\WBBDefViewModel.cs" />
+    <Compile Include="Sections\Device\WBBViewModel.cs" />
+    <Compile Include="Services\Devices\ASPLocator.cs" />
+    <Compile Include="Services\Devices\DeviceManager.cs" />
+    <Compile Include="Services\Devices\SIMConnector.cs" />
+    <Compile Include="Services\Devices\SIMDevice.cs" />
+    <Compile Include="Services\Devices\WBBDevice.cs" />
+    <Compile Include="Dialogs\HelpViewModel.cs" />
+    <Compile Include="Sections\Collections\CollectionViewModel.cs" />
+    <Compile Include="Sections\Collections\CollectionManagerViewModel.cs" />
+    <Compile Include="Sections\Collections\ImportCollectionViewModel.cs" />
+    <Compile Include="Services\Devices\ASPDevice.cs" />
+    <Compile Include="Sections\Collections\TaskViewModel.cs" />
+    <Compile Include="Common\DataAwareScreen.cs" />
+    <Compile Include="Sections\Device\ASPViewModel.cs" />
+    <Compile Include="Sections\Device\MainViewModel.cs" />
+    <Compile Include="Dialogs\ShouldSaveViewModel.cs" />
+    <Compile Include="Events\CollectionSelectedEvent.cs" />
+    <Compile Include="Events\DataChangedEvent.cs" />
+    <Compile Include="Events\StudySelectedEvent.cs" />
+    <Compile Include="Models\Calculations\Calibration.cs" />
+    <Compile Include="Models\Calculations\SwayPosition.cs" />
+    <Compile Include="Services\Devices\WBBConnector.cs" />
+    <Compile Include="Services\IAppPreferences.cs" />
+    <Compile Include="Services\IDevice.cs" />
+    <Compile Include="Services\IDeviceConnector.cs" />
+    <Compile Include="Services\IDeviceManager.cs" />
+    <Compile Include="Services\IFileStorage.cs" />
+    <Compile Include="Services\IDbStorage.cs" />
+    <Compile Include="Services\Storage\AppPreferences.cs" />
+    <Compile Include="Services\Storage\FileStorage.cs" />
+    <Compile Include="Services\Storage\LocalStorageServiceRavenDB.cs" />
+    <Compile Include="Models\Collection.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\Legacy\BalanceMeasurement.cs" />
+    <Compile Include="Models\Legacy\BalanceValues.cs" />
+    <Compile Include="Models\Legacy\BluetoothDevice.cs" />
+    <Compile Include="Models\Legacy\CartesianPair.cs" />
+    <Compile Include="Models\Legacy\CartesianRange.cs" />
+    <Compile Include="Models\Legacy\CompleteMote.cs" />
+    <Compile Include="Models\Legacy\DataContract.cs" />
+    <Compile Include="Models\Legacy\DataMember.cs" />
+    <Compile Include="Models\Legacy\DataPoint.cs" />
+    <Compile Include="Models\Legacy\ExperimentStep.cs" />
+    <Compile Include="Models\Legacy\Person.cs" />
+    <Compile Include="Models\Legacy\Range.cs" />
+    <Compile Include="Models\Legacy\Sample.cs" />
+    <Compile Include="Models\Legacy\SamplingSession.cs" />
+    <Compile Include="Models\Legacy\SessionSummary.cs" />
+    <Compile Include="Models\Legacy\SubjectSession.cs" />
+    <Compile Include="Models\Legacy\SubjectStep.cs" />
+    <Compile Include="Models\Legacy\WiiBalanceBoardMeasurement.cs" />
+    <Compile Include="Models\Legacy\WiimoteMeasurement.cs" />
+    <Compile Include="Models\Study.cs" />
+    <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Services\Storage\LocalStorageContext.cs" />
+    <Compile Include="Services\Storage\LocalStorageServiceMock.cs" />
+    <Compile Include="Services\Storage\LocalStorageServiceSqlCompact.cs" />
+    <Compile Include="Sections\Studies\StudyGroupViewModel.cs" />
+    <Compile Include="Sections\Studies\StudyTaskViewModel.cs" />
+    <Compile Include="Sections\Subjects\CollectionViewModel.cs" />
+    <Compile Include="Sections\Subjects\GroupViewModel.cs" />
+    <Compile Include="Sections\Subjects\SubjectViewModel.cs" />
+    <Compile Include="Events\SubjectSelectedEvent.cs" />
+    <Compile Include="ShellViewModel.cs" />
+    <Compile Include="Sections\Studies\StudyViewModel.cs" />
+    <Compile Include="Sections\Studies\StudyManagerViewModel.cs" />
+    <Compile Include="Sections\Subjects\SubjectManagerViewModel.cs" />
+    <Page Include="Dialogs\HelpView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Flyouts\SaveChangesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sections\Collections\CollectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Collections\CollectionManagerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sections\Collections\ImportCollectionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sections\Collections\TaskView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Device\ASPView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Device\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs\ShouldSaveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Device\NULLView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Device\SIMView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Device\WBBView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Studies\StudyGroupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Studies\StudyTaskView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Subjects\GroupView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sections\Subjects\CollectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Subjects\SubjectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IShell.cs" />
+    <Page Include="ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Studies\StudyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Studies\StudyManagerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sections\Subjects\SubjectManagerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NinjectBootstrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="WiimoteLib_Extras\docs\WiimoteLib.chm" />
+    <None Include="WiimoteLib_Extras\samples.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WiimoteLib_Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WiimoteLib_Extras\docs\copyright.txt" />
+    <Resource Include="WiimoteLib_Extras\docs\license.txt" />
+    <Content Include="WiimoteLib_Extras\MSRS\Wiimote.Y2007.M06.dll" />
+    <Content Include="WiimoteLib_Extras\MSRS\Wiimote.Y2007.M06.Proxy.dll" />
+    <Resource Include="WiimoteLib_Extras\MSRS\Wiimote.Y2007.M06.Proxy.xml" />
+    <Content Include="WiimoteLib_Extras\MSRS\Wiimote.Y2007.M06.Transform.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
