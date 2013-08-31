@@ -132,6 +132,7 @@
     <ProjectReference Include="..\AgiliSway9.BluetoothHelper\AgiliSway9.BluetoothHelper.vcxproj">
       <Project>{fbc68974-77a1-4131-8640-1cb6c971ca5c}</Project>
       <Name>AgiliSway9.BluetoothHelper</Name>
+      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
