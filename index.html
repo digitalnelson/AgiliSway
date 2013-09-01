@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Agilisway by digitalnelson</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Agilisway</h1>
+        <h2>Collect raw sway coordinates from the Wii Fit (R).</h2>
+        <a href="https://github.com/digitalnelson/AgiliSway" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="agilisway" class="anchor" href="#agilisway"><span class="octicon octicon-link"></span></a>AgiliSway</h1>
+
+<p>A thin WPF wrapper around the <a href="http://wiimotelib.codeplex.com/">WiiMote Lib</a> (written by Brian Peek) intended to allow researchers to acquire data from the Wii Fit (R).  It collects raw data from the board and saves center of gravity coordinates to disk in an XML format.  It is also capable of exporting raw sensor values for those interested in generating custom analytics.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<ol>
+<li>Install <a href="http://www.microsoft.com/en-us/download/details.aspx?id=30653">.net 4.5</a>
+</li>
+<li>Install <a href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">Visual C++ 11 redist</a>
+</li>
+<li>Install <a href="http://www.microsoft.com/en-us/download/details.aspx?id=17876">SqlCE redist</a>
+</li>
+<li>Download <a href="https://github.com/digitalnelson/AgiliSway/archive/master.zip">AgiliSway</a> from GitHub
+
+<ul>
+<li>Extract AgiliSway-master.zip</li>
+<li>Navigate to AgiliSway-master/inst and extract AgiliSway9.zip and AgiliSway9.DeviceManager.zip</li>
+</ul>
+</li>
+</ol><h2>
+<a name="connecting-a-wbb" class="anchor" href="#connecting-a-wbb"><span class="octicon octicon-link"></span></a>Connecting a WBB</h2>
+
+<ol>
+<li>Go to the AgiliSway9.DeviceManager folder and double click on AgiliSway9.DeviceManager.exe (ASDM)</li>
+<li>Open the battery compartment of the WBB</li>
+<li>Push the red button</li>
+<li>Quickly hit the search button in ASDM</li>
+<li>The device will appear in the list.  Select the device.</li>
+<li>Click the pair button</li>
+<li>Allow windows to install the HID driver for the device.</li>
+<li>Open AgiliSway and select the devices tab.</li>
+<li>Select the WBB option on the left.</li>
+<li>Push the front button on the WBB.</li>
+<li>The green light should blink a couple of times and then become constant.</li>
+</ol><h2>
+<a name="running-agilisway" class="anchor" href="#running-agilisway"><span class="octicon octicon-link"></span></a>Running AgiliSway</h2>
+
+<ol>
+<li>First run a pop up will appear asking you to select a folder.  This will be the folder where AgiliSway stores the program database and all of the sway files.</li>
+<li>AgiliSway will then start and default to the Study page.</li>
+<li>Make sure your study has been created and selected.</li>
+<li>Click devices and select the device you are interested and set options.</li>
+<li>Go to subjects and create a new subject.</li>
+<li>Click on collections and create a new collection.</li>
+<li>Make sure to calibrate the board before the subject steps onto it and in between tasks.</li>
+</ol><h2>
+<a name="troubleshooting" class="anchor" href="#troubleshooting"><span class="octicon octicon-link"></span></a>Troubleshooting</h2>
+
+<ul>
+<li>Make sure to push the red WBB button at least every 10 sec to make sure the device stays in pairing mode while the paring and installation are occuring.</li>
+<li>If the pairing is unsuccessful, remove one battery for 10 sec, delete the device from windows bluetooth under the bluetooth control panel applet.</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>This software is released under the MIT license.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/digitalnelson/AgiliSway/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/digitalnelson/AgiliSway/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/digitalnelson/AgiliSway"></a> is maintained by <a href="https://github.com/digitalnelson">digitalnelson</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
